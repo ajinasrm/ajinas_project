@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders List</title>
+</head>
+<body>
+    <h1>Orders List</h1>
+    <table border="1">
+        <tr>
+            <th>Pant ID</th>
+            <th>Customer Name</th>
+            <th>Customer Email</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>Material</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.pant_id }}</td>
+            <td>{{ order.customer_name }}</td>
+            <td>{{ order.customer_email }}</td>
+            <td>{{ order.color }}</td>
+            <td>{{ order.size }}</td>
+            <td>{{ order.material }}</td>
+            <td>{{ order.price }}</td>
+            <td>{{ order.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
